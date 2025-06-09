@@ -1,12 +1,10 @@
 from math import sqrt
+import sys
 import numpy as np
 import pyautogui
 from time import sleep
 
-try:
-    from scapy.consts import WINDOWS
-except:
-    WINDOWS = True
+WINDOWS = sys.platform.startswith("win")
 
 if WINDOWS:
     PYGUI_RES = (1, 1)
